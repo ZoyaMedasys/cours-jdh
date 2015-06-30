@@ -28,12 +28,16 @@ stttc = ttc(ht,tva);
 <body>
     <script language="javascript" type="text/javascript">
     
-     tva = 12;
+      tva = 12;
      
      nb2= new Number();
      nb2 = ttc(ht,tva);
+     
+     nb3 = ttc.call(158,10);
+     nb4 = ttc.call(158,1000);
 
-    document.write(ht+" euros hors taxe donnent avec une TVA de "+tva+" "+stttc+" euros TTC. " + nb + " " + nb2 );
+    document.write(ht+" euros hors taxe donnent avec une TVA de "+tva+" "+stttc+" euros TTC. " + nb + " " + nb2 + "call " + nb3 + " " + nb4 +" " + getDate());
+    console.log("kuku");
     
     
     </script>
