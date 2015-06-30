@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Accueil</title>
+        <style type="text/css" media="screen">
+            @import url("lib/style.css");
+        </style>
+        <script language="javascript" type="text/javascript" src="lib/affiche.js" ></script>
+        <script language="javascript" type="text/javascript" src="lib/menu.js" ></script>
+        <script language="javascript" type="text/javascript" src="lib/toolkit.js" ></script> 
+        <script language="javascript" type="text/javascript" src="lib/bd.js" ></script>  
+    </head>
+    <body>
+        <!--<div id="bandeau">&nbsp;</div> -->
+        <script language="javascript" type="text/javascript">
+            affichePageBandeauHaut();
+        </script>
+
+        <!--	<div id="menu">
+                        <ul>
+                                <li class="select"><a href="index.htm" title="Accueil">Accueil</a></li>
+                                <li><a href="recherche.htm" title="Recherche">Recherche</a></li>
+                                <li><a href="commande.htm" title="Commande">Commande</a></li>
+                        </ul>
+                </div>-->               
+        <script language="javascript" type="text/javascript">
+            affichePageMenu("Recherche");
+        </script>
+        <!--	<div id="titre"><h1>Bienvenue sur BDPhilia</h1></div> -->
+        <script language="javascript" type="text/javascript">
+            console.log(projet[0].nom);
+            affichePageTitre(projet[0].nom);
+        </script>
+
+        <div id="blockDroit">
+            <p>Ce site vous permet de consulter et commander parmis un stock de Bandes dessinnées disponibles.</p>
+            <p>La rubrique <a href="recherche.htm">recherche</a> vous permet de consulter le catalogue des bandes dessinées disponibles.</p>
+            <p>En vous rendant dans notre espace <a href="commande.htm">commande</a> vous pourrez enregistrer votre selection dans un pannier d'achat.</p>	<p>Ce site vous permet de consulter et commander parmis un stock de Bandes dessinnées disponibles.</p>
+            <p>La rubrique <a href="recherche.htm">recherche</a> vous permet de consulter le catalogue des bandes dessinées disponibles.</p>
+            <p>En vous rendant dans notre espace <a href="commande.htm">commande</a> vous pourrez enregistrer votre selection dans un pannier d'achat.</p>
+
+            <script language="javascript" type="text/javascript">
+                console.log(projet[0].auteur);
+                affichePagePied(projet[0].auteur);
+                var tintin = new ficheBd('Tintin', 'Hergé', '1995', 'to be done', '2.90', '80');
+                tintin.destocker(10).stocker(2);
+                document.write(tintin);               
+                
+                var asterix = new ficheBd('Asterix', 'Uderzo', '2005', 'to be done', tintin.prix, tintin.stock);
+                document.write(asterix);
+                
+                document.write(print_r(pagesDisponibles));
+                
+            </script>
+        </div>
+        <div id="pied"><span>&copy; 2009 STARTX - Réalisé par Christophe LARUE</span></div>
+</body>
+</html>
