@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+<title>calcul ttc</title>
+<script language="javascript" type="text/javascript">
+    function ttc (ht, taux)
+    {
+    var resultat = ht * (1+ taux / cent);
+    return(resultat);
+    }
+ht = 158;
+tva = 5.5;
+var cent=100;
+
+nb= new Number();
+nb = ttc(ht,tva);
+
+stttc = ttc(ht,tva);
+
+
+</script>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+    
+     tva = 12;
+     
+     nb2= new Number();
+     nb2 = ttc(ht,tva);
+
+    document.write(ht+" euros hors taxe donnent avec une TVA de "+tva+" "+stttc+" euros TTC. " + nb + " " + nb2 );
+    
+    
+    </script>
+</body>
+</html>
