@@ -51,7 +51,26 @@
                 
                 document.write(print_r(pagesDisponibles));
                 
+                var l_stock = new  stockBd();
+                l_stock.ajouter_bd('Lucky Luke -Ma Dalton', 'Morris/Goscinny', 1971, '', 50, 10);
+                l_stock.ajouter_bd('Lucky Luke -Les Dalton se rachetent', 'Morris/Goscinny', 1965, '', 75, 15);
+                l_stock.ajouter_bd('Lucky Luke -Le cuisinier français', 'Morris/Guylouis', 2003, '', 20, 50);
+                
+                l_stock.stocker (2, 100);
+                l_stock.destocker(3, 8);
+                
+                l_stock.toString();
+//	- Afficher votre tableau dans la balise #blockDroit        
+                
             </script>
+            
+            <br />
+            <br />
+            <form name="formu" id="formu" >
+                <textarea name="texte" cols=50 rows=2 onkeyup="init(this.value)" >Entrer du texte</textarea>
+		<br />
+		<input type="button" value="Voir" onclick="init(document.formu.texte.value)" />
+	   </form>
         </div>
         <div id="pied"><span>&copy; 2009 STARTX - Réalisé par Christophe LARUE</span></div>
 </body>
