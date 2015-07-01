@@ -29,7 +29,7 @@
 				<br/>
 				<label style="width:150px;display:block;float:left">Adresse IP :</label>
 					<input type="text" value="192.168.1.1" name="ip"/>
-					<input type="button" value="Tester" onclick="verifieIp()"/>
+					<!--<input type="button" value="Tester" onclick="verifieIp()"/> -->
 				<br/>
 				<label style="width:150px;display:block;float:left">Contrôle IP :</label>
 					<input type="text" value="" name="result" disabled="disabled"/>
@@ -40,15 +40,27 @@
 			
 			
 			<form name="formu" id="formu" >
-				<textarea name="texte" cols=50 rows=10 onkeyup="init(this.value)" >Entrer du texte</textarea>
-				<br />
+				<textarea id="textsource" name="texte" cols=50 rows=2 onkeyup="copytext()" >Entrer du texte</textarea>
+				<br />                                
+                                <textarea id="textcopy" name="texteCopie" cols=50 rows=2 >Copie</textarea>
+                                <br />                                
+				
+			</form>
+                        
+                        <form name="formu" id="formu" >
+				<textarea id="textsource2" name="texte" cols=50 rows=2  >Entrer du texte</textarea>
+				<br />                                
+                                <textarea id="textcopy2" name="texteCopie" cols=50 rows=2 >Copie</textarea>
+                                <br />                                
 				<input type="button" value="Voir" onclick="init(document.formu.texte.value)" />
 			</form>
-			<div id="voirtxt" style="position:absolute; left:460px; top:19px;
+                        
+                        <div id="voirtxt" style="position:absolute; left:460px; top:19px;
 			width:384px; height:179px; z-index:1; background-color: #FFFFFF; layer-
 			background-color: #FFFFFF; border: 1px none #000000;"></div>
 			<div id="boutons" style="position:absolute; left:460px; top:202px;
 			width:384px; height:18px; z-index:2" align="center">
+			
 			
 		</div>
 	</body>
